@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(36, 145, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main{
+    background-color: white;
+    max-height: 35%;
+    width: 30%;
+    min-width: max-content;
+    min-height: max-content;
+    border-radius: 10px;
+    padding: 20px 30px;
+
+    transition: max-height 0.5s ease;
+}
+.active{
+    max-height: 70%;
+}
+
+
+.header p{
+    margin-top: 10px;
+}
+
+
+.btn{
+    margin: 30px auto;
+    /* border: 2px solid green; */
+
+
+}
+.btn input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-color: gray;
+}
+.btn button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(36, 145, 247);
+    border-color: transparent;
+    color: white;
+    
+
+}
+
+
+
+ .qrCode{
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.active .qrCode{
+    opacity: 1;
+    pointer-events: auto;
+}
+ .qr{
+    height: 150px;
+    width: 150px;
+
+    background-color: black;
+}
+
+
+
+
+@media (max-width: 475px) {
+
+    main{
+        max-height: 210px;
+        min-height: max-content;
+        width: 90%;
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .header{
+        text-align: center;
+    }
+    .qr{
+        height: 100px;
+        width: 100px;
+        min-height: max-content;
+    }
+
+    
+}
+
+@media (max-width: 375px) {
+    main{
+        max-height: 250px;
+    }
+    
+}
